@@ -8,7 +8,7 @@
  * A library of functions for generating weighted random indices.
  */
 UCLASS()
-class UWeightedRandomBlueprintFunctionLibrary : public UBlueprintFunctionLibrary
+class WEIGHTEDRANDOM_API UWeightedRandomBlueprintFunctionLibrary : public UBlueprintFunctionLibrary
 {
 	GENERATED_BODY()
 
@@ -21,7 +21,7 @@ public:
 	 */
 	UFUNCTION(BlueprintCallable, Category = "Math|Random")
 	static void GenerateWeightedRandomIndex(const TArray<float>& Weights, int32& RandomIndex);
-	
+
 	/**
 	 * Generate a weighted random index based on the provided weights.
 	 * @param Weights				An array of weights for each index. The weights do not need to sum to 1.0, they will be normalized.
@@ -31,7 +31,7 @@ public:
 	 */
 	UFUNCTION(BlueprintCallable, Category = "Math|Random")
 	static void GenerateWeightedRandomIndexFromStream(const TArray<float>& Weights, const FRandomStream& RandomStream, int32& RandomIndex);
-	
+
 	/**
 	 * Generate an array of random indices based on the provided weights.
 	 * @param Weights				An array of weights for each index. The weights do not need to sum to 1.0, they will be normalized.
@@ -41,7 +41,7 @@ public:
 	 */
 	UFUNCTION(BlueprintCallable, Category = "Math|Random")
 	static void GenerateWeightedRandomIndices(const TArray<float>& Weights, int32 NumIndicesToGenerate, TArray<int32>& RandomIndices);
-	
+
 	/**
 	 * Generate an array of random indices based on the provided weights.
 	 * @param Weights				An array of weights for each index. The weights do not need to sum to 1.0, they will be normalized.
